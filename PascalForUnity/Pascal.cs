@@ -55,6 +55,7 @@ public class Pascal
             symTab = parser.GetSymTab();
 
             backend.Process(iCode, symTab);
+            Console.ReadLine();
         }
         catch (Exception ex) {
             Console.WriteLine("***** Internal translator error. *****");
@@ -105,7 +106,7 @@ public class Pascal
         }
     }
 
-    private static readonly  String SOURCE_LINE_FORMAT = "%03d %s";
+    private static readonly  String SOURCE_LINE_FORMAT = "{0} {1}";
 
     /**
      * Listener for source messages.
@@ -135,10 +136,14 @@ public class Pascal
         }
     }
 
+    //private static readonly  String PARSER_SUMMARY_FORMAT =
+    //    "\n%,20d source lines." +
+    //    "\n%,20d syntax errors." +
+    //    "\n%,20.2f seconds total parsing time.\n";
     private static readonly  String PARSER_SUMMARY_FORMAT =
-        "\n%,20d source lines." +
-        "\n%,20d syntax errors." +
-        "\n%,20.2f seconds total parsing time.\n";
+        "\n%,{0} source lines." +
+        "\n%,{1} syntax errors." +
+        "\n%,{2} seconds total parsing time.\n";
 
     /**
      * Listener for parser messages.
@@ -170,14 +175,22 @@ public class Pascal
         }
     }
 
+    //private static readonly  String INTERPRETER_SUMMARY_FORMAT =
+    //    "\n%,20d statements executed." +
+    //    "\n%,20d runtime errors." +
+    //    "\n%,20.2f seconds total execution time.\n";
+
     private static readonly  String INTERPRETER_SUMMARY_FORMAT =
-        "\n%,20d statements executed." +
-        "\n%,20d runtime errors." +
-        "\n%,20.2f seconds total execution time.\n";
+        "\n%,{0} statements executed." +
+        "\n%,{1} runtime errors." +
+        "\n%,{2} seconds total execution time.\n";
 
     private static readonly  String COMPILER_SUMMARY_FORMAT =
-        "\n%,20d instructions generated." +
-        "\n%,20.2f seconds total code generation time.\n";
+        "\n%,{0} instructions generated." +
+        "\n%,{1} seconds total code generation time.\n";
+    //private static readonly  String COMPILER_SUMMARY_FORMAT =
+    //    "\n%,20d instructions generated." +
+    //    "\n%,20.2f seconds total code generation time.\n";
 
     /**
      * Listener for back end messages.
