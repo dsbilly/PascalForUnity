@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.frontend.pascal;
-namespace PascalForUnity.frontend
+using PascalForUnity.Frontend.Pascal;
+namespace PascalForUnity.Frontend
 {
   /**
  * <h1>FrontendFactory</h1>
@@ -24,7 +24,7 @@ public class FrontendFactory
      * @return the parser.
      * @throws Exception if an error occurred.
      */
-    public static Parser createParser(String language, String type,
+    public static Parser CreateParser(String language, String type,
                                       Source source)
     {
         if (language.Equals("Pascal") &&

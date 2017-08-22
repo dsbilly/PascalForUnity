@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PascalForUnity.intermediate
+namespace PascalForUnity.Intermediate
 {
     /**
  * <h1>ICode</h1>

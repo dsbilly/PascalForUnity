@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.intermediate;
-using PascalForUnity.message;
-namespace PascalForUnity.backend.compiler
+using PascalForUnity.Intermediate;
+using PascalForUnity.Messages;
+namespace PascalForUnity.Backends.Compiler
 {
    /**
  * <h1>CodeGenerator</h1>

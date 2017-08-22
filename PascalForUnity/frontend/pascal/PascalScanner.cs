@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PascalForUnity.frontend.pascal
+namespace PascalForUnity.Frontend.Pascal
 {
     /**
  * <h1>PascalScanner</h1>

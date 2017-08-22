@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.message;
+using PascalForUnity.Messages;
 using System.IO;
-namespace PascalForUnity.frontend {
+namespace PascalForUnity.Frontend {
     /**
  * <h1>Source</h1>
  *

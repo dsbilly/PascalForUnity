@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.message;
-using PascalForUnity.intermediate;
-namespace PascalForUnity.frontend {
+using PascalForUnity.Messages;
+using PascalForUnity.Intermediate;
+namespace PascalForUnity.Frontend {
     /**
  * <h1>Parser</h1>
  *

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.frontend.pascal;
-using PascalForUnity.frontend;
-using PascalForUnity.backend;
-using PascalForUnity.intermediate;
-using PascalForUnity.message;
+using PascalForUnity.Frontend.Pascal;
+using PascalForUnity.Frontend;
+using PascalForUnity.Backends;
+using PascalForUnity.Intermediate;
+using PascalForUnity.Messages;
 using System.IO;
 namespace PascalForUnity
 {
@@ -42,7 +42,7 @@ public class Pascal
             source = new Source(new StreamReader(filePath));
             source.AddMessageListener(new SourceMessageListener());
 
-            parser = FrontendFactory.createParser("Pascal", "top-down", source);
+            parser = FrontendFactory.CreateParser("Pascal", "top-down", source);
             parser.AddMessageListener(new ParserMessageListener());
 
             backend = BackendFactory.createBackend(operation);
@@ -58,7 +58,7 @@ public class Pascal
             Console.ReadLine();
         }
         catch (Exception ex) {
-            Console.WriteLine("***** Internal translator error. *****");
+            Console.WriteLine("***** Internal translator error. *****" + ex.ToString());
             //ex.printStackTrace();
         }
     }

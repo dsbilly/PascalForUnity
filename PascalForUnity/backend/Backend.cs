@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PascalForUnity.message;
-using PascalForUnity.frontend;
-using PascalForUnity.intermediate;
-namespace PascalForUnity.backend
+using PascalForUnity.Messages;
+using PascalForUnity.Frontend;
+using PascalForUnity.Intermediate;
+namespace PascalForUnity.Backends
 {
    /**
  * <h1>Backend</h1>
