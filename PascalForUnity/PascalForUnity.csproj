@@ -50,6 +50,7 @@
     <Compile Include="Frontend\Parse.cs" />
     <Compile Include="Frontend\Pascal\PascalParserTD.cs" />
     <Compile Include="Frontend\Pascal\PascalScanner.cs" />
+    <Compile Include="Frontend\Pascal\PascalTokenType.cs" />
     <Compile Include="Frontend\Scanner.cs" />
     <Compile Include="Frontend\Source.cs" />
     <Compile Include="Frontend\Token.cs" />

@@ -35,7 +35,28 @@ public class PascalParserTD : Parser
         Token token;
         //long startTime = System.currentTimeMillis();
         DateTime startTime = System.DateTime.Now;// .currentTimeMillis();
-        while (!((token = NextToken()) is EofToken)) {}
+   
+        try {
+            // Loop over each token until the end of file.
+            while (!((token = NextToken()) is EofToken)) {
+                TokenType tokenType = token.GetType();
+
+                if (tokenType !=TokenType.ERROR) {
+
+                    // Format each token.
+                    SendMessage(new Message(TOKEN,
+                                            new Object[] {token.GetLineNumber(),
+                                                          token.GetPosition(),
+                                                          tokenType,
+                                                          token.GetText(),
+                                                          token.GetValue()}));
+                }
+                else {
+                    errorHandler.flag(token, (PascalErrorCode) token.getValue(),
+                                      this);
+                }
+
+            }
 
         // Send the parser summary message.
         //float elapsedTime = (System.currentTimeMillis() - startTime)/1000f;
