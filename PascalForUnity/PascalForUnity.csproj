@@ -48,9 +48,17 @@
     <Compile Include="Frontend\EofToken.cs" />
     <Compile Include="Frontend\FrontendFactory.cs" />
     <Compile Include="Frontend\Parse.cs" />
+    <Compile Include="Frontend\Pascal\PascalErrorCode.cs" />
+    <Compile Include="Frontend\Pascal\PascalErrorHandler.cs" />
     <Compile Include="Frontend\Pascal\PascalParserTD.cs" />
     <Compile Include="Frontend\Pascal\PascalScanner.cs" />
+    <Compile Include="Frontend\Pascal\PascalToken.cs" />
     <Compile Include="Frontend\Pascal\PascalTokenType.cs" />
+    <Compile Include="Frontend\Pascal\Tokens\PascalErrorToken.cs" />
+    <Compile Include="Frontend\Pascal\Tokens\PascalNumberToken.cs" />
+    <Compile Include="Frontend\Pascal\Tokens\PascalSpecialSymbolToken.cs" />
+    <Compile Include="Frontend\Pascal\Tokens\PascalStringToken.cs" />
+    <Compile Include="Frontend\Pascal\Tokens\PascalWordToken.cs" />
     <Compile Include="Frontend\Scanner.cs" />
     <Compile Include="Frontend\Source.cs" />
     <Compile Include="Frontend\Token.cs" />
