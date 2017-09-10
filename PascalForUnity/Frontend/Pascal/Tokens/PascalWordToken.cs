@@ -35,9 +35,9 @@ namespace PascalForUnity.Frontend.Pascal.Tokens
             text = textBuffer.ToString();
 
             // Is it a reserved word or an identifier?
-            PascalTokenTypeEnum tokenTypeEnum = (PascalTokenType.RESERVED_WORDS.Contains(text.ToLower()))
-                   ?(PascalTokenTypeEnum)Enum.Parse(typeof(PascalTokenTypeEnum), text.ToUpper())   // reserved word
-                   : PascalTokenTypeEnum.IDENTIFIER;                                  // identifier
+            //PascalTokenTypeEnum tokenTypeEnum = (PascalTokenType.RESERVED_WORDS.Contains(text.ToLower()))
+            //       ?(PascalTokenTypeEnum)Enum.Parse(typeof(PascalTokenTypeEnum), text.ToUpper())   // reserved word
+            //       : PascalTokenTypeEnum.IDENTIFIER;                                  // identifier
 
             type = new PascalTokenType(text);
         }

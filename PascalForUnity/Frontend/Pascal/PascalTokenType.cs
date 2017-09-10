@@ -60,7 +60,7 @@ namespace PascalForUnity.Frontend.Pascal {
         private static readonly int LAST_SPECIAL_INDEX  = (int)PascalTokenTypeEnum.DOT_DOT;
 
         private String text;  // token text
-
+        PascalTokenTypeEnum type;
         /**
          * Constructor.
          */
@@ -74,7 +74,17 @@ namespace PascalForUnity.Frontend.Pascal {
          */
         public PascalTokenType ( String text ) {
             this.text = text;
+            this.type = (PascalTokenType.RESERVED_WORDS.Contains(text.ToLower()))
+                  ? (PascalTokenTypeEnum)Enum.Parse(typeof(PascalTokenTypeEnum), text.ToUpper())   // reserved word
+                  : PascalTokenTypeEnum.IDENTIFIER;   
         }
+
+        public PascalTokenType(PascalTokenTypeEnum type) {
+            this.text = type.ToString();
+            this.type = type;
+        }
+
+       
 
         /**
          * Getter.
@@ -138,5 +148,14 @@ namespace PascalForUnity.Frontend.Pascal {
         //        SPECIAL_SYMBOLS.put(values[i].getText(), values[i]);
         //    }
         //}
+
+        public static bool operator ==(PascalTokenType lhs, PascalTokenType rhs) {
+            return lhs.type == rhs.type;
+        }
+
+        //比较运算符必须成对重载.
+        public static bool operator !=(PascalTokenType lhs, PascalTokenType rhs) {
+            return !(lhs.type == rhs.type);
+        }
     }
 }
